@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Menu, X, Phone } from "lucide-react"
 import { motion } from "framer-motion"
+import Logo from "../assets/LogoTransp.png"
 
 const navItems = ["Home", "About", "Courses", "Benefits", "Contact"]
 
@@ -30,17 +31,22 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* 🌸 Logo */}
-        <motion.h1
-          whileHover={{ scale: 1.05 }}
-          className="text-xl md:text-2xl font-extrabold tracking-wide text-gray-900"
-        >
-          <span className="bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent">
-            Shanvi
-          </span>{" "}
-          <span className="text-gray-700 font-semibold">
-            Learning Hub
-          </span>
-        </motion.h1>
+<motion.div
+  whileHover={{ scale: 1.05 }}
+  className="flex items-center gap-3 cursor-pointer"
+>
+<img
+  src={Logo}
+  alt="Shanvi Learning Hub Logo"
+  className="h-16 md:h-20 w-auto object-contain"
+/>
+
+  {/* Optional text beside logo */}
+  <span className="hidden sm:block text-lg md:text-xl font-bold text-gray-800">
+    Shanvi Learning Hub
+  </span>
+</motion.div>
+
 
         {/* 🌿 Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
