@@ -6,6 +6,7 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Benefits from "../components/Benifits"
 import Reviews from "../components/Reviews"
+import Certifications from "../components/Certifications"
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Benefits/>
       <Reviews/>
       <Contact />
+      <Certifications/>
       <Footer />
     </>
   )
