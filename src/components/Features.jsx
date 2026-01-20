@@ -1,5 +1,12 @@
 import { motion } from "framer-motion"
-import { Brain, Sparkles, Zap, Calculator, GraduationCap, Users } from "lucide-react"
+import {
+  Brain,
+  Sparkles,
+  Zap,
+  Calculator,
+  GraduationCap,
+  Users,
+} from "lucide-react"
 
 const features = [
   {
@@ -29,7 +36,7 @@ const Features = () => {
     <section id="about" className="py-24 bg-gradient-to-b from-white to-violet-50">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* ABOUT US */}
+        {/* ================= ABOUT US ================= */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +69,22 @@ const Features = () => {
               progress.
             </p>
 
-            <div className="mt-8 flex items-center gap-6">
+            {/* ================= TUTOR INFO ================= */}
+            <div className="mt-6 inline-block rounded-2xl bg-violet-50 border border-violet-200 px-6 py-4">
+              <p className="flex items-center gap-2 text-lg font-bold text-gray-900">
+                <GraduationCap size={18} className="text-violet-600" />
+                S. Sivasathya
+              </p>
+              <p className="text-sm font-semibold text-violet-700 mt-1">
+                M.E., M.D (Acu)., Spl. D.Ed.
+              </p>
+              <p className="text-sm text-gray-600 mt-1">
+                Tutor
+              </p>
+            </div>
+
+            {/* Highlights */}
+            <div className="mt-8 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2 text-gray-800 font-semibold">
                 <Users className="text-violet-600" />
                 Small Batch Learning
@@ -82,7 +104,7 @@ const Features = () => {
 
             <ul className="space-y-4">
               {[
-                "Certified & Experienced Trainers",
+                "Certified & Experienced Trainer",
                 "Online & Offline Classes",
                 "Interactive Learning Methods",
                 "Regular Progress Tracking",
@@ -96,7 +118,7 @@ const Features = () => {
           </div>
         </motion.div>
 
-        {/* FEATURES */}
+        {/* ================= FEATURES ================= */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, MapPin, Mail } from "lucide-react"
+import { Phone, MessageCircle, MapPin, Mail, Navigation } from "lucide-react"
+import LocationMap from "./LocationMap"
 
 const Footer = () => {
   return (
@@ -11,8 +12,8 @@ const Footer = () => {
             Shanvi <span className="text-violet-300">Learning Hub</span>
           </h2>
           <p className="text-violet-200 leading-relaxed">
-            Empowering young minds through Abacus & Vedic Maths with
-            proven methods that build confidence, focus, and speed.
+            Empowering young minds through Abacus, Phonics, Vedic Maths & Robotics
+            with proven methods that build confidence, focus, and speed.
           </p>
         </div>
 
@@ -48,7 +49,7 @@ const Footer = () => {
               <MessageCircle size={18} /> WhatsApp Support
             </li>
             <li className="flex items-center gap-3">
-              <MapPin size={18} /> Online & Offline Classes
+              <MapPin size={18} /> Madurai – Online & Offline Classes
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} /> shanvilearninghub@gmail.com
@@ -56,23 +57,14 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* CTA */}
+        {/* Map */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
-            Get Started
+            Our Location
           </h3>
-          <p className="text-violet-200 mb-4">
-            Book a free demo class and help your child excel in mathematics.
-          </p>
-          <a
-            href="https://wa.me/919025205280"
-            className="inline-flex items-center gap-2 bg-green-500 text-white
-            px-6 py-3 rounded-full font-semibold shadow-lg
-            hover:scale-105 transition"
-          >
-            <MessageCircle size={18} />
-            WhatsApp Us
-          </a>
+          <LocationMap/>
+
+          
         </div>
       </div>
 
