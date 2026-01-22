@@ -26,21 +26,29 @@ const Navbar = () => {
           : "bg-white/70 backdrop-blur-md"}
         border-b border-violet-100`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
         
-        {/* 🌸 Logo */}
+        {/* 🌸 Logo + Name */}
         <motion.div
           whileHover={{ scale: 1.04 }}
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <img
             src={Logo}
             alt="Shanvi Learning Hub Logo"
-            className="h-14 md:h-16 w-auto object-contain"
+            className="h-12 sm:h-14 md:h-16 w-auto object-contain"
           />
 
-          <span className="hidden sm:block text-base md:text-lg font-bold text-gray-800 leading-tight">
-            Shanvi Learning Hub
+          {/* ✅ Visible in MOBILE also */}
+          <span
+            className="
+              text-sm sm:text-base md:text-lg
+              font-bold text-gray-800
+              leading-tight max-w-[140px] sm:max-w-none
+            "
+          >
+            Shanvi<br className="sm:hidden" />
+            Learning Hub
           </span>
         </motion.div>
 
@@ -52,7 +60,7 @@ const Navbar = () => {
               href={`#${item.toLowerCase()}`}
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative text-gray-700 font-medium tracking-wide group"
+              className="relative text-gray-700 font-medium group"
             >
               {item}
               <span className="absolute left-1/2 -bottom-1 h-[2px] w-0
@@ -70,8 +78,7 @@ const Navbar = () => {
           href="tel:9025205280"
           className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full
           bg-gradient-to-r from-violet-600 to-purple-500
-          text-white font-semibold shadow-md shadow-violet-200
-          hover:shadow-violet-300 transition-all"
+          text-white font-semibold shadow-md"
         >
           <Phone size={16} />
           Call Now
@@ -92,8 +99,9 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white/95 backdrop-blur-xl px-6 py-6 space-y-6
-          text-gray-800 border-t border-violet-100"
+          className="md:hidden bg-white/95 backdrop-blur-xl
+          px-6 py-6 space-y-6 text-gray-800
+          border-t border-violet-100"
         >
           {navItems.map((item, i) => (
             <motion.a
@@ -101,7 +109,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               href={`#${item.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              className="block text-lg font-semibold tracking-wide"
+              className="block text-lg font-semibold"
             >
               {item}
             </motion.a>
